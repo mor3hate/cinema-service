@@ -1,0 +1,9 @@
+.secondary {
+	@apply flex flex-col;
+	width: 20%;
+}
+
+.primary {
+	@apply flex flex-col bg-gray-500 rounded-2xl p-5;
+	width: 70%;
+}

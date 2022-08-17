@@ -1,0 +1,22 @@
+.menu {
+	@apply mb-5;
+
+	> .title {
+		@apply text-base font-medium;
+	}
+
+	> ul {
+		> li {
+			@apply border-r-4 border-transparent text-white opacity-50 transition-all;
+			&.active {
+				@apply border-r-white opacity-100;
+			}
+			&:hover {
+				@apply text-white opacity-100;
+			}
+			> a {
+				@apply flex items-center gap-2 mt-3;
+			}
+		}
+	}
+}
