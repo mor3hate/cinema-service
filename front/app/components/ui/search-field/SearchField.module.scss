@@ -1,0 +1,23 @@
+.search_field {
+	@apply relative h-12 w-12 bg-gray-500;
+	border-radius: 50%;
+	transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	&.search_field_active {
+		@apply w-44;
+	}
+}
+
+.search_button {
+	@apply rounded-3xl bg-gray-500 h-12 w-12 absolute right-0 z-1;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	&.search_button_active {
+		@apply right-1;
+		transform: translateY(-50%) rotate(360deg);
+	}
+
+	> svg {
+		@apply mx-auto text-2xl;
+	}
+}

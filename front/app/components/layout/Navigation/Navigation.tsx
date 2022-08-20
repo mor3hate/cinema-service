@@ -6,9 +6,11 @@ import styles from './Navigation.module.scss'
 const Navigation: FC = () => {
 	return (
 		<aside>
-			<div className={styles.secondary}>Hey</div>
+			<div className={styles.secondary}>
+				<MenuContainer type='secondary' />
+			</div>
 			<div className={styles.primary}>
-				<MenuContainer />
+				<MenuContainer type='primary' />
 			</div>
 		</aside>
 	)

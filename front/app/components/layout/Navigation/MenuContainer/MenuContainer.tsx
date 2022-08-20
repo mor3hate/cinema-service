@@ -1,13 +1,27 @@
 import { FC } from 'react'
+import GenreMenu from './Genres/GenreMenu'
 import Menu from './Menu'
-import { firstMenu, libraryMenu } from './menu.data'
+import { firstMenu, libraryMenu, secondaryMenu } from './menu.data'
 
-const MenuContainer: FC = () => {
+interface Menus {
+	type: string
+}
+
+const MenuContainer: FC<Menus> = ({ type }) => {
 	return (
-		<div>
-			<Menu menu={firstMenu} />
-			<Menu menu={libraryMenu} />
-		</div>
+		<>
+			{type == 'primary' ? (
+				<div>
+					<Menu menu={firstMenu} />
+					<Menu menu={libraryMenu} />
+					<GenreMenu />
+				</div>
+			) : (
+				<div>
+					<Menu menu={secondaryMenu} />
+				</div>
+			)}
+		</>
 	)
 }
 

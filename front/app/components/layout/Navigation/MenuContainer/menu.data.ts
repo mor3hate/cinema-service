@@ -2,6 +2,7 @@ import { IMenu } from './menu.interface'
 
 export const firstMenu: IMenu = {
 	title: 'Menu',
+	type: 'primary',
 	items: [
 		{
 			icon: 'AiFillHome',
@@ -23,6 +24,7 @@ export const firstMenu: IMenu = {
 
 export const libraryMenu: IMenu = {
 	title: 'Library',
+	type: 'primary',
 	items: [
 		{
 			icon: 'AiTwotoneHeart',
@@ -33,6 +35,20 @@ export const libraryMenu: IMenu = {
 			icon: 'AiFillFire',
 			title: 'Trending',
 			link: '/trending',
+		},
+	],
+}
+
+export const secondaryMenu: IMenu = {
+	type: 'secondary',
+	items: [
+		{
+			icon: 'AiFillAppstore',
+			link: '/primary-menu',
+		},
+		{
+			icon: 'AiOutlineInbox',
+			link: '/genres',
 		},
 	],
 }

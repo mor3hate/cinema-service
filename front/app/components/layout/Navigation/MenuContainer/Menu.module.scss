@@ -20,3 +20,23 @@
 		}
 	}
 }
+.secondary_menu {
+	@apply pl-7;
+	> ul {
+		> li {
+			&.active {
+				@apply fill-yellow-700;
+			}
+			> a {
+				@apply block mt-4;
+
+				> svg {
+					@apply h-7 w-7 transition-colors;
+					&:hover {
+						@apply fill-yellow-700;
+					}
+				}
+			}
+		}
+	}
+}

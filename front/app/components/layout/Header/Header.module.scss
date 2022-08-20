@@ -10,7 +10,8 @@
 }
 
 .header {
-	@apply flex-default;
+	@apply flex-default max-w-full;
+	width: 70%;
 
 	> .heading {
 		@apply font-semibold text-xl flex items-center gap-3;
