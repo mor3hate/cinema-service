@@ -6,6 +6,7 @@
 	}
 
 	> ul {
+		@apply animate-fade;
 		> li {
 			@apply border-r-4 border-transparent text-white opacity-50 transition-all;
 			&.active {
@@ -24,9 +25,7 @@
 	@apply pl-7;
 	> ul {
 		> li {
-			&.active {
-				@apply fill-yellow-700;
-			}
+			@apply border-none;
 			> a {
 				@apply block mt-4;
 

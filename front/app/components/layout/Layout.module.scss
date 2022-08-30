@@ -1,5 +1,5 @@
 .layout {
-	@apply relative overflow-x-hidden;
+	@apply relative overflow-hidden;
 
 	> header {
 		min-height: 5rem;
@@ -7,7 +7,7 @@
 	}
 
 	> aside {
-		@apply fixed top-24 bottom-0 overflow-y-auto;
+		@apply fixed top-24 bottom-7 overflow-y-auto;
 	}
 
 	> aside:first-of-type {
@@ -16,7 +16,7 @@
 	}
 
 	> aside:last-child {
-		@apply right-0 top-0;
+		@apply right-10 top-10;
 		width: 20%;
 	}
 

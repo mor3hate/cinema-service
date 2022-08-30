@@ -17,7 +17,7 @@ const SearchList: FC<{ movies: IMovie[] }> = ({ movies }) => {
 								src={movie.poster}
 								width={50}
 								className='rounded-lg'
-								height={60}
+								height={50}
 								objectFit='cover'
 								objectPosition='top'
 								alt={movie.title}

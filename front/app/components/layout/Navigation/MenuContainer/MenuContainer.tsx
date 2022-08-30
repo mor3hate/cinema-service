@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import AuthItems from './auth/AuthItems'
 import GenreMenu from './Genres/GenreMenu'
 import Menu from './Menu'
 import { firstMenu, libraryMenu, secondaryMenu } from './menu.data'

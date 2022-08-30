@@ -3,9 +3,12 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:regular,500,600,700&display=swap');
+@import 'react-redux-toastr/src/styles/index';
 
 html,
 body {
+	scrollbar-color: #23232e #f6e122;
+	scrollbar-width: thin;
 	padding: 0;
 	margin: 0;
 	font-family: Raleway;
@@ -30,6 +33,7 @@ a {
 		background: black;
 	}
 }
+
 .search_input {
 	@apply bg-gray-500 text-white p-2 rounded-xl outline-none;
 	width: 100%;
@@ -39,4 +43,25 @@ a {
 	&.active {
 		opacity: 1;
 	}
+}
+
+.error_page {
+	@apply mx-auto w-1/2 mt-36 text-center;
+	> h1 {
+		@apply text-2xl font-semibold mb-6;
+	}
+	> p {
+		@apply mb-6;
+	}
+}
+
+::-webkit-scrollbar {
+	width: 10px; /* ширина для вертикального скролла */
+	height: 10px; /* высота для горизонтального скролла */
+	background-color: #23232e;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #f6e122;
+	border-radius: 9em;
 }

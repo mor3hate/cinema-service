@@ -8,12 +8,6 @@ export interface IGenre {
 	icon: AntIconsTypeName
 }
 
-export interface IParameters {
-	year: number
-	duration: number
-	country: string
-}
-
 export interface IMovie {
 	_id: string
 	poster: string
@@ -22,10 +16,16 @@ export interface IMovie {
 	rating: number
 	genres: IGenre[]
 	actors: IActor[]
-	parameters: IParameters[]
+	parameters: IParameters
 	slug: string
 	countOpened: number
 	videoUrl: string
+}
+
+export interface IParameters {
+	year: number
+	duration: number
+	country: string
 }
 
 export interface IActor {

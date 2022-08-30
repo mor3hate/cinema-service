@@ -1,0 +1,13 @@
+.wrapper {
+	@apply mt-36;
+	> form {
+		@apply w-1/2 mx-auto bg-gray-500 p-3 rounded-2xl;
+		box-shadow: 4px 10px 7px 0px rgba(0, 0, 0, 0.2);
+		> h1 {
+			@apply text-center text-2xl font-semibold mb-6;
+		}
+		> .buttons_wrapper {
+			@apply flex gap-4 justify-center mt-6;
+		}
+	}
+}

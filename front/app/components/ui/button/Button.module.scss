@@ -1,0 +1,16 @@
+.button {
+	@apply inline-block  p-2 bg-yellow-700 rounded-xl text-black font-semibold hover:bg-yellow-900;
+	min-width: 100px;
+
+	&.secondary {
+		@apply bg-yellow-700 h-10 w-10 flex justify-center items-center mt-5 transition-colors hover:bg-yellow-900;
+		border-radius: 50%;
+		min-width: 0;
+		box-shadow: 4px 4px 40px 10px rgba(246, 225, 34, 0.2);
+		> svg {
+			@apply h-4 w-4;
+			color: #191a23;
+			stroke-width: 50px;
+		}
+	}
+}

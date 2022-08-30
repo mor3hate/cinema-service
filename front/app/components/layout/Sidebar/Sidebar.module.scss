@@ -1,0 +1,10 @@
+.sidebar {
+	@apply bg-gray-500 rounded-2xl p-5;
+
+	> h2 {
+		@apply flex-default font-semibold text-lg mb-6;
+	}
+	> p {
+		@apply opacity-50 text-sm;
+	}
+}

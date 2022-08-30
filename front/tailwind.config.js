@@ -12,6 +12,7 @@ module.exports = {
 			white: colors.white,
 			transparent: colors.transparent,
 			yellow: {
+				900: '#f9e000',
 				700: '#F6E122',
 				500: '#EEDF4E',
 			},

@@ -29,7 +29,7 @@ const SearchField: FC<ISearch> = ({ searchTerm, handleSearch }) => {
 			})}
 		>
 			<input
-				type='text'
+				type='search'
 				placeholder='Search'
 				value={searchTerm}
 				onChange={handleSearch}

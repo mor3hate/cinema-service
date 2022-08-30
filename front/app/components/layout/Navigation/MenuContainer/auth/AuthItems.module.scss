@@ -1,0 +1,19 @@
+.auth {
+	@apply pl-6 animate-fade;
+	> li {
+		@apply mb-3;
+		list-style-type: none;
+		&.active {
+			@apply fill-yellow-700;
+		}
+		> a {
+			@apply block;
+			> svg {
+				@apply h-7 w-7 transition-colors;
+				&:hover {
+					@apply fill-yellow-700 opacity-100;
+				}
+			}
+		}
+	}
+}
