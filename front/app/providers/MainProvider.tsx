@@ -1,8 +1,10 @@
 import Layout from '@/components/layout/Layout'
+import { TypeComponentAuthFields } from '@/shared/types/auth.types'
 import { store } from '@/store/store'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { FC, PropsWithChildren } from 'react'
+import { FC } from 'react'
 import { Provider } from 'react-redux'
+import AuthProvider from './auth-providers/AuthProvider'
 import HeadProvider from './HeadProvider'
 import ReduxToast from './ReduxToast'
 
@@ -14,13 +16,15 @@ const queryClient = new QueryClient({
 	},
 })
 
-const MainProvider: FC<PropsWithChildren> = ({ children }) => {
+const MainProvider: FC<TypeComponentAuthFields> = ({ children, Component }) => {
 	return (
 		<HeadProvider>
 			<Provider store={store}>
 				<QueryClientProvider client={queryClient}>
 					<ReduxToast />
-					<Layout>{children}</Layout>
+					<AuthProvider Component={Component}>
+						<Layout>{children}</Layout>
+					</AuthProvider>
 				</QueryClientProvider>
 			</Provider>
 		</HeadProvider>
