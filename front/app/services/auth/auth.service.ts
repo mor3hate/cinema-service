@@ -34,10 +34,10 @@ export const AuthService = {
 	},
 
 	async getTokens() {
-		const refresh = Cookies.get('refreshToken')
+		const refreshToken = Cookies.get('refreshToken')
 		const response = await axiosDefault.post<IAuthResponse>(
 			getAuthUrl('/login/access-token'),
-			{ refresh },
+			{ refreshToken },
 			{ headers: getContentType() }
 		)
 

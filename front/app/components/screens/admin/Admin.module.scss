@@ -1,0 +1,32 @@
+.stats {
+	@apply flex justify-center mt-7 gap-10;
+
+	.block {
+		@apply w-2/5 rounded-lg bg-gray-500;
+		box-shadow: 4px 10px 7px 0px rgba(0, 0, 0, 0.2);
+
+		> p {
+			@apply mt-4 text-lg font-semibold;
+		}
+
+		> h3 {
+			@apply text-sm opacity-70 mb-2;
+		}
+
+		.image {
+			@apply rounded-xl image-bg shadow-lg;
+		}
+	}
+
+	.count_users {
+		@apply flex flex-col items-center justify-center;
+
+		> div {
+			@apply text-7xl font-semibold;
+
+			&:last-child {
+				@apply text-lg;
+			}
+		}
+	}
+}

@@ -13,7 +13,7 @@ const CheckRole: FC<TypeComponentAuthFields> = ({
 
 	const Children = () => <>{children}</>
 
-	if (isAdmin) {
+	if (!isAdmin) {
 		router.pathname !== '/404' && router.replace('/404')
 		return null
 	}

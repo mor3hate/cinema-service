@@ -4,6 +4,7 @@ import MenuItem from '../MenuItem'
 import LogoutButton from './LogoutButton'
 
 import styles from './AuthItems.module.scss'
+import { getAdminHomeUrl } from '@/config/url.config'
 
 const AuthItems: FC = () => {
 	const { user } = useAuth()
@@ -18,6 +19,14 @@ const AuthItems: FC = () => {
 							link: '/profile',
 						}}
 					/>
+					{user.isAdmin && (
+						<MenuItem
+							item={{
+								icon: 'AiOutlineCrown',
+								link: getAdminHomeUrl(),
+							}}
+						/>
+					)}
 					<LogoutButton />
 				</>
 			) : (

@@ -1,0 +1,27 @@
+.navigation {
+	@apply w-4/5 mx-auto bg-gray-500 p-3 rounded-2xl mb-8;
+	box-shadow: 4px 10px 7px 0px rgba(0, 0, 0, 0.2);
+
+	> ul {
+		@apply flex justify-evenly items-center;
+
+		> li {
+			@apply inline-block;
+			> a {
+				@apply block relative py-2 transition-all opacity-40 hover:opacity-100;
+
+				&::before {
+					@apply absolute w-full bottom-0 left-0 h-0.5 bg-transparent transition-colors rounded-lg;
+					content: '';
+				}
+
+				&.active {
+					@apply opacity-100;
+					&::before {
+						@apply bg-yellow-700;
+					}
+				}
+			}
+		}
+	}
+}
