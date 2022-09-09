@@ -7,6 +7,6 @@ export interface IButtonLink {
 
 export interface IButtonAuth {
 	onClick: () => void
-	disabled: boolean
+	disabled?: boolean
 	text: string
 }

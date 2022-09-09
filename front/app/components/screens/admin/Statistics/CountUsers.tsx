@@ -1,10 +1,10 @@
 import { AdminService } from '@/services/admin.service'
 import { useQuery } from '@tanstack/react-query'
 import { FC } from 'react'
+import SkeletonLoader from '@/components/ui/SkeletonLoader'
 
 import cn from 'classnames'
 import styles from '../Admin.module.scss'
-import SkeletonLoader from '@/components/ui/SkeletonLoader'
 
 const CountUsers: FC = () => {
 	const { isLoading, data: response } = useQuery(['count users'], () =>

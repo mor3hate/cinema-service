@@ -1,0 +1,15 @@
+.item {
+	@apply flex items-center justify-between w-4/5 mt-8 bg-gray-500
+	rounded-xl mx-auto;
+	padding: 10px;
+	> div {
+		width: 24%;
+		&:last-child {
+			width: 14%;
+		}
+	}
+}
+
+.headerItem {
+	@apply bg-yellow-700 text-black font-semibold;
+}

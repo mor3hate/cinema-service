@@ -1,0 +1,12 @@
+.action {
+	@apply flex items-center gap-4;
+	> button {
+		> svg {
+			fill: #f6e122;
+			transition: all 0.3s ease;
+			&:hover {
+				fill: #f9e000;
+			}
+		}
+	}
+}
