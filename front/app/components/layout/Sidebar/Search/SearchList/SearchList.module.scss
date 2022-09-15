@@ -3,6 +3,7 @@
 	width: 100%;
 	min-height: 100px;
 	top: calc(100% + 15px);
+	z-index: 3;
 
 	> a {
 		@apply flex items-center gap-3 mt-3 border-r-2 border-transparent text-white;

@@ -22,3 +22,56 @@
 	@apply absolute -bottom-6 left-0 text-sm w-full;
 	color: #ff0000;
 }
+
+.editor_wrapper {
+	@apply border-0;
+	.wrapper {
+		.toolbar {
+			@apply mt-4 outline-none border-none mb-0 bg-gray-500 bg-opacity-50 p-3;
+		}
+
+		.editor {
+			@apply cursor-text h-96 border rounded-b-lg border-gray-500 px-4 overflow-hidden transition-colors mb-6 focus-within:border-yellow-700;
+		}
+	}
+}
+
+.upload_field {
+	@apply relative;
+
+	.upload_flex {
+		@apply flex;
+
+		> .upload_img {
+			@apply shrink-0 relative w-24 h-24;
+
+			img {
+				@apply image-bg rounded-md;
+			}
+
+			> span {
+				@apply animate-fade;
+			}
+		}
+
+		> label {
+			@apply block mr-6;
+
+			.error {
+				@apply relative -bottom-3;
+			}
+
+			> span {
+				@apply text-xs uppercase text-white opacity-50;
+			}
+
+			> input {
+				@apply block w-full mt-4 text-sm file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-none file:text-sm file:font-semibold file:bg-yellow-700 opacity-70 file:text-black transition-opacity;
+
+				&:hover {
+					@apply opacity-100;
+				}
+			}
+		}
+	}
+}

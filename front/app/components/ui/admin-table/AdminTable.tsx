@@ -2,7 +2,6 @@ import { FC } from 'react'
 import SkeletonLoader from '../SkeletonLoader'
 import { ITableItem } from './admin-table.interface'
 
-import styles from './AdminTable.module.scss'
 import AdminTableHeader from './AdminTableHeader'
 import AdminTableItem from './AdminTableItem'
 
@@ -36,7 +35,7 @@ const AdminTable: FC<IAdminTable> = ({
 				))
 			) : (
 				<div className='text-lg text-yellow-700 text-center mt-8'>
-					Users not found
+					Elements not found
 				</div>
 			)}
 		</div>

@@ -13,7 +13,7 @@ const AdminActions: FC<IAdminActions> = ({ editUrl, removeHandler }) => {
 	const { push } = useRouter()
 
 	const confirmedDeleteHandler = () => {
-		const confirmDelete = confirm('Do you really want to delete this user?')
+		const confirmDelete = confirm('Do you really want to delete this element?')
 		if (confirmDelete) {
 			removeHandler()
 		} else {

@@ -1,5 +1,5 @@
 import { useOnClickOutside } from '@/hooks/useOutside'
-import { ChangeEvent, FC, useState, useRef } from 'react'
+import { ChangeEvent, FC, useState, useRef, useEffect } from 'react'
 import AntIcon from '../AntIcon'
 
 import styles from './SearchField.module.scss'
@@ -13,7 +13,17 @@ interface ISearch {
 const SearchField: FC<ISearch> = ({ searchTerm, handleSearch }) => {
 	const [show, setIsShow] = useState(false)
 
+	const [disabled, setDisabled] = useState(false)
+
 	const searchRef = useRef<HTMLDivElement>(null)
+
+	useEffect(() => {
+		if (searchTerm === '') {
+			setDisabled(false)
+		} else {
+			setDisabled(true)
+		}
+	}, [searchTerm])
 
 	const handleClick = () => {
 		setIsShow(!show)
@@ -44,6 +54,7 @@ const SearchField: FC<ISearch> = ({ searchTerm, handleSearch }) => {
 				})}
 				title='Search movies'
 				onClick={() => handleClick()}
+				disabled={disabled}
 			>
 				<AntIcon name='AiOutlineSearch' />
 			</button>

@@ -13,7 +13,7 @@ import Image from 'next/image'
 const MostPopularMovie: FC = () => {
 	const { isLoading, data: movie } = useQuery(
 		['get most popular movie to admin'],
-		() => MovieService.getPopularMovies(),
+		() => MovieService.getPopularMovies(0, 1),
 		{
 			select: (data): IMovie => data[0],
 		}

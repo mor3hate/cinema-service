@@ -3,6 +3,7 @@
 	rounded-xl mx-auto;
 	padding: 10px;
 	> div {
+		@apply truncate;
 		width: 24%;
 		&:last-child {
 			width: 14%;

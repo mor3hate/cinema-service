@@ -1,0 +1,38 @@
+@import '../../../../styles/mixin.scss';
+
+.slider {
+	@apply relative mx-auto mt-3;
+	max-width: 780px;
+	@include fade-bg-gradient();
+}
+
+.slide {
+	@apply relative h-80 rounded-3xl overflow-hidden shadow-xl;
+	.img {
+		@apply image-bg;
+	}
+
+	.slide_content {
+		@apply absolute z-2 bottom-0 left-5 animate-fade;
+		padding: 0 0 6px 4px;
+	}
+
+	.slide_title {
+		@apply text-5xl uppercase font-bold text-center text-shadow mb-1;
+	}
+
+	.slide_subtitle {
+		@apply uppercase text-shadow mb-4 font-medium opacity-70;
+	}
+}
+
+.arrow {
+	@apply bg-white absolute bottom-5 p-3 rounded-2xl bg-opacity-30 z-2 animate-fade flex items-center justify-center;
+	&.left {
+		@apply right-24;
+	}
+
+	&.right {
+		@apply right-8;
+	}
+}

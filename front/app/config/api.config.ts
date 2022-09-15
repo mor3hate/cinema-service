@@ -8,6 +8,6 @@ export const getUsersUrl = (string: string) => `/users${string}`
 
 export const getMoviesUrl = (string: string) => `/movies${string}`
 
-export const getActorsUrl = (string: string) => `/actors${string}`
+export const getActorsUrl = (string: string) => `/actors/${string}`
 
 export const getRatingsUrl = (string: string) => `/ratings${string}`

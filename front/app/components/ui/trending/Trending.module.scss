@@ -1,0 +1,45 @@
+@import '../../../../styles/mixin.scss';
+
+.trending_parent {
+	@apply flex items-center overflow-x-auto flex-nowrap py-3 ml-3;
+	-webkit-overflow-scrolling: touch;
+}
+
+.item {
+	@apply relative transition-transform flex items-end shadow-lg rounded-xl overflow-hidden;
+	flex: 0 0 auto;
+
+	&:hover {
+		transform: translateY(-5px);
+	}
+
+	&.vertical {
+		@apply mr-4 last:mr-0 w-1/5 h-72;
+		max-width: 200px;
+	}
+
+	&.horizontal {
+		@apply mb-8 h-44;
+		width: 31%;
+	}
+
+	&.withText {
+		@include fade-bg-gradient(0deg);
+		&::before {
+			border-radius: 9px;
+			height: 105%;
+		}
+	}
+
+	img {
+		@apply image-bg;
+	}
+
+	.content {
+		@apply relative z-2 text-center m-3 w-full;
+
+		.sub_content {
+			@apply font-semibold mb-1 text-white text-shadow;
+		}
+	}
+}
