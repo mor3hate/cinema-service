@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 export const useSlider = (length: number) => {
 	const [currentIdx, setCurrentIdx] = useState(0)
+
 	const [slideIn, setSlideIn] = useState(true)
 
 	const itExistNext = currentIdx + 1 < length
@@ -18,5 +19,11 @@ export const useSlider = (length: number) => {
 		}, 300)
 	}
 
-	return { slideIn, itExistNext, itExistPrev, handleClick, currentIdx }
+	return {
+		slideIn,
+		itExistNext,
+		itExistPrev,
+		handleClick,
+		currentIdx,
+	}
 }

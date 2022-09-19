@@ -5,6 +5,6 @@ const MovieEditPage: NextPageAuth = () => {
 	return <MoviesEdit />
 }
 
-MovieEditPage.isAdmin = true
+MovieEditPage.isOnlyAdmin = true
 
 export default MovieEditPage

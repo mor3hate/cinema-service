@@ -23,7 +23,7 @@
 }
 
 .movie_title {
-	@apply transition-all hover:underline truncate;
+	@apply transition-all border-b-2 border-transparent hover:border-white truncate;
 }
 
 .circle_wrapper {

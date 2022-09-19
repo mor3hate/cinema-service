@@ -1,0 +1,8 @@
+@import '../../../../styles/mixin.scss';
+
+.banner {
+	@apply relative overflow-hidden w-full h-80 rounded-3xl shadow-lg flex flex-col justify-end mx-auto;
+	max-width: 800px;
+
+	@include fade-bg-gradient();
+}

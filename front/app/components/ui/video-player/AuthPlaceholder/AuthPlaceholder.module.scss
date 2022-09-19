@@ -1,0 +1,15 @@
+.placeholder {
+	@apply flex absolute top-0 left-0 w-full h-full bg-gray-500 bg-opacity-50;
+
+	> div {
+		@apply m-auto text-center;
+		> p {
+			@apply mb-4 text-lg;
+		}
+	}
+}
+
+.btn {
+	@apply block p-2 bg-yellow-700 rounded-xl text-black font-semibold hover:bg-yellow-900 mx-auto text-center;
+	width: 100px;
+}

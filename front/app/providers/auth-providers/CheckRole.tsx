@@ -5,7 +5,7 @@ import { FC } from 'react'
 
 const CheckRole: FC<TypeComponentAuthFields> = ({
 	children,
-	Component: { isAdmin, isUser },
+	Component: { isOnlyAdmin, isOnlyUser },
 }) => {
 	const { user } = useAuth()
 
@@ -13,16 +13,18 @@ const CheckRole: FC<TypeComponentAuthFields> = ({
 
 	const Children = () => <>{children}</>
 
-	if (!isAdmin) {
+	if (!isOnlyAdmin && !isOnlyUser) return <Children />
+
+	if (user?.isAdmin) return <Children />
+
+	if (isOnlyAdmin) {
 		router.pathname !== '/404' && router.replace('/404')
 		return null
 	}
 
-	if (user?.isAdmin) return <Children />
-
 	const isLoginUser = user && !user.isAdmin
 
-	if (isLoginUser && isUser) {
+	if (isLoginUser && isOnlyUser) {
 		return <Children />
 	} else {
 		router.pathname !== '/auth' && router.replace('/auth')

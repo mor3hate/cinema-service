@@ -2,7 +2,7 @@ import ButtonLink from '@/components/ui/button/ButtonLink'
 import Meta from '@/utils/meta/Meta'
 import React from 'react'
 
-const error404 = () => {
+const Error404 = () => {
 	return (
 		<div className='error_page'>
 			<Meta title='Page not found'>
@@ -15,4 +15,4 @@ const error404 = () => {
 	)
 }
 
-export default error404
+export default Error404

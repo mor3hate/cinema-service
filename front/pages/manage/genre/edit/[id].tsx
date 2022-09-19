@@ -5,6 +5,6 @@ const GenreEditPage: NextPageAuth = () => {
 	return <GenreEdit />
 }
 
-GenreEditPage.isAdmin = true
+GenreEditPage.isOnlyAdmin = true
 
 export default GenreEditPage

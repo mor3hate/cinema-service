@@ -5,6 +5,6 @@ const GenresPage: NextPageAuth = () => {
 	return <GenreListPage />
 }
 
-GenresPage.isAdmin = true
+GenresPage.isOnlyAdmin = true
 
 export default GenresPage

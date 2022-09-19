@@ -5,6 +5,6 @@ const AdminPage: NextPageAuth = () => {
 	return <Admin />
 }
 
-AdminPage.isAdmin = true
+AdminPage.isOnlyAdmin = true
 
 export default AdminPage

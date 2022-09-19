@@ -11,7 +11,7 @@
 			> svg {
 				@apply h-7 w-7 transition-colors;
 				&:hover {
-					@apply fill-yellow-700 opacity-100;
+					@apply fill-yellow-700;
 				}
 			}
 		}

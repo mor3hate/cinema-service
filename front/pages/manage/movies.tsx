@@ -5,6 +5,6 @@ const MoviesPage: NextPageAuth = () => {
 	return <MovieListPage />
 }
 
-MoviesPage.isAdmin = true
+MoviesPage.isOnlyAdmin = true
 
 export default MoviesPage

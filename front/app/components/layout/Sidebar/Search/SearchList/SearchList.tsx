@@ -6,13 +6,18 @@ import { FC } from 'react'
 
 import styles from './SearchList.module.scss'
 
-const SearchList: FC<{ movies: IMovie[] }> = ({ movies }) => {
+interface ISearchList {
+	movies: IMovie[]
+	onClick: () => void
+}
+
+const SearchList: FC<ISearchList> = ({ movies, onClick }) => {
 	return (
 		<div className={styles.search_list}>
 			{movies.length ? (
 				movies.map(movie => (
 					<Link key={movie._id} href={getMoviesUrl(movie.slug)}>
-						<a>
+						<a onClick={onClick}>
 							<Image
 								src={movie.poster}
 								width={50}
@@ -22,9 +27,7 @@ const SearchList: FC<{ movies: IMovie[] }> = ({ movies }) => {
 								objectPosition='top'
 								alt={movie.title}
 							/>
-							<div className={styles.flex_wrapper}>
-								<span>{movie.title}</span>
-							</div>
+							<span className={styles.search_movie_title}>{movie.title}</span>
 						</a>
 					</Link>
 				))

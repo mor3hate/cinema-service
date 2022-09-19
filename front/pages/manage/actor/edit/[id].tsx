@@ -5,6 +5,6 @@ const ActorEditPage: NextPageAuth = () => {
 	return <ActorEdit />
 }
 
-ActorEditPage.isAdmin = true
+ActorEditPage.isOnlyAdmin = true
 
 export default ActorEditPage

@@ -5,7 +5,6 @@ import { ITrendingItem } from '@/components/ui/trending/trending.interface'
 import { getActorsUrl, getMoviesUrl } from '@/config/api.config'
 import { ActorService } from '@/services/actor.service'
 import { MovieService } from '@/services/movie.service'
-import { getGenresList } from '@/utils/movie/getGenresList'
 import type { NextPage } from 'next'
 
 const HomePage: NextPage<IHome> = ({ slides, actors }) => {
@@ -40,6 +39,7 @@ export async function getStaticProps() {
 				slides,
 				actors,
 			} as IHome,
+			revalidate: 60,
 		}
 	} catch (error) {
 		return {

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { FC } from 'react'
 import AntIcon from '../AntIcon'
-import { IButtonLink } from './Button.interface'
+import { IButtonLink } from './button.interface'
 
 import cn from 'classnames'
 import styles from './Button.module.scss'
@@ -11,6 +11,7 @@ const ButtonLink: FC<IButtonLink> = ({
 	type = 'primary',
 	name,
 	link,
+	title,
 }) => {
 	return (
 		<Link href={`${link}`}>
@@ -18,6 +19,7 @@ const ButtonLink: FC<IButtonLink> = ({
 				className={cn(styles.button, {
 					[styles.secondary]: type == 'secondary',
 				})}
+				title={title}
 			>
 				{text ? <a>{text}</a> : <AntIcon name={name} />}
 			</button>

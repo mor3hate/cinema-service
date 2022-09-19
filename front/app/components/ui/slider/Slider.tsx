@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 import { ISlide } from './slider.interface'
 import { useSlider } from './UseSlider'
 import { CSSTransition } from 'react-transition-group'
@@ -17,12 +17,7 @@ const Slider: FC<ISlider> = ({ slides }) => {
 
 	return (
 		<div className={styles.slider}>
-			<CSSTransition
-				in={slideIn}
-				timeout={300}
-				classNames='slider-animate'
-				unmountOnExit
-			>
+			<CSSTransition in={slideIn} timeout={300} classNames='slider-animate'>
 				<SlideItem slide={slides[currentIdx]} />
 			</CSSTransition>
 

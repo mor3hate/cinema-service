@@ -13,7 +13,6 @@ const Navigation: FC = () => {
 	return (
 		<aside>
 			<div className={styles.secondary}>
-				<MenuContainer type='secondary' />
 				<DynamicAuthItems />
 			</div>
 			<div className={styles.primary}>

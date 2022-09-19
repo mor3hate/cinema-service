@@ -1,0 +1,10 @@
+.heading {
+	@apply text-2xl font-semibold mt-12 mb-5;
+}
+.description {
+	@apply opacity-70 mb-7;
+}
+
+.section {
+	@apply flex flex-wrap gap-6;
+}

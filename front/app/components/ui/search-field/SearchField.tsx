@@ -29,7 +29,11 @@ const SearchField: FC<ISearch> = ({ searchTerm, handleSearch }) => {
 		setIsShow(!show)
 	}
 
-	useOnClickOutside(searchRef, () => setIsShow(false))
+	useOnClickOutside(searchRef, () =>
+		setTimeout(() => {
+			setIsShow(false)
+		}, 300)
+	)
 
 	return (
 		<div

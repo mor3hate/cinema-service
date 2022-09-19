@@ -10,7 +10,7 @@ const DynamicCheckRole = dynamic(() => import('./CheckRole'), { ssr: false })
 
 const AuthProvider: FC<TypeComponentAuthFields> = ({
 	children,
-	Component: { isAdmin, isUser },
+	Component: { isOnlyAdmin, isOnlyUser },
 }) => {
 	const { user } = useAuth()
 
@@ -19,19 +19,19 @@ const AuthProvider: FC<TypeComponentAuthFields> = ({
 	const { pathname } = useRouter()
 
 	useEffect(() => {
-		const token = Cookies.get('accessToken')
-		if (token) checkAuth()
+		const accessToken = Cookies.get('accessToken')
+		if (accessToken) checkAuth()
 	}, [])
 
 	useEffect(() => {
-		const token = Cookies.get('refreshToken')
-		if (!token && user) logOut()
+		const refreshToken = Cookies.get('refreshToken')
+		if (!refreshToken && user) logOut()
 	}, [pathname])
 
-	return !isAdmin && !isUser ? (
+	return !isOnlyAdmin && !isOnlyUser ? (
 		<>{children}</>
 	) : (
-		<DynamicCheckRole Component={{ isAdmin, isUser }}>
+		<DynamicCheckRole Component={{ isOnlyAdmin, isOnlyUser }}>
 			{children}
 		</DynamicCheckRole>
 	)

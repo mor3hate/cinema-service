@@ -5,6 +5,6 @@ const user: NextPageAuth = () => {
 	return <UserListPage />
 }
 
-user.isAdmin = true
+user.isOnlyAdmin = true
 
 export default user

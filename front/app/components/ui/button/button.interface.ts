@@ -3,6 +3,7 @@ export interface IButtonLink {
 	text?: string
 	type: string
 	name?: any
+	title?: string
 }
 
 export interface IButtonAuth {

@@ -1,0 +1,20 @@
+.rating_parent {
+	@apply bg-gray-500 rounded-xl p-3 max-w-xs mx-auto mt-10;
+	box-shadow: 4px 10px 7px 0px rgba(0, 0, 0, 0.2);
+
+	> h3 {
+		@apply text-center text-xl font-semibold;
+	}
+
+	> p {
+		@apply text-center opacity-70;
+	}
+
+	> div {
+		@apply text-4xl opacity-90 left-1/4 mt-4;
+	}
+}
+
+.sendMessage {
+	@apply text-center text-xl font-semibold h-11 mt-4 text-yellow-500 animate-scale;
+}

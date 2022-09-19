@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { FC } from 'react'
 import ButtonLink from '../button/ButtonLink'
 import { ISlide } from './slider.interface'
@@ -17,7 +18,7 @@ const SlideItem: FC<ISlideItem> = ({ slide }) => {
 					alt={slide.title}
 					src={slide.bigPoster}
 					draggable={false}
-					unoptimized
+					priority
 					layout='fill'
 					className={styles.img}
 				/>
@@ -28,6 +29,7 @@ const SlideItem: FC<ISlideItem> = ({ slide }) => {
 				<div className={styles.slide_title}>{slide.title}</div>
 				<div className={styles.slide_subtitle}>{slide.subTitle}</div>
 				<ButtonLink
+					title='Play'
 					link={slide.link}
 					type='secondary'
 					name='AiOutlineCaretRight'
